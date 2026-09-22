@@ -19,11 +19,11 @@
                 extend: {
                     colors: {
                         brand: {
-                            teal: '#317B74',
-                            gold: '#B89B66',
-                            dark: '#0B0F17',
-                            card: '#161F2E',
-                            border: '#233044'
+                            teal: '#2F7267',
+                            gold: '#B09066',
+                            dark: '#0D1412',
+                            card: '#15201D',
+                            border: '#23332E'
                         }
                     },
                     fontFamily: {
@@ -35,246 +35,243 @@
     </script>
     <style>
         body {
-            background-color: #0B0F17;
+            background-color: #0D1412;
             color: #E2E8F0;
         }
         .glass-card {
-            background: rgba(22, 31, 46, 0.75);
+            background: rgba(21, 32, 29, 0.75);
             backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(176, 144, 102, 0.2);
         }
         .text-gradient {
-            background: linear-gradient(135deg, #317B74 0%, #B89B66 100%);
+            background: linear-gradient(135deg, #B09066 0%, #E2C299 50%, #2F7267 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         .bg-gradient-brand {
-            background: linear-gradient(135deg, #317B74 0%, #B89B66 100%);
+            background: linear-gradient(135deg, #2F7267 0%, #B09066 100%);
+        }
+        .hero-glow {
+            background: radial-gradient(circle, rgba(47, 114, 103, 0.3) 0%, rgba(176, 144, 102, 0.15) 50%, rgba(13, 20, 18, 0) 70%);
         }
     </style>
 </head>
 <body class="font-sans antialiased selection:bg-brand-teal selection:text-white">
 
-    <!-- القائمة العلوية -->
+    <!-- Navbar -->
     <nav class="fixed top-0 right-0 w-full z-50 glass-card border-b border-brand-border/50">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-xl bg-gradient-brand p-0.5 flex items-center justify-center shadow-lg shadow-brand-teal/20">
-                    <div class="w-full h-full bg-brand-dark rounded-[10px] flex items-center justify-center font-extrabold text-xl text-white">
+                    <div class="w-full h-full bg-brand-dark rounded-[10px] flex items-center justify-center font-extrabold text-xl text-brand-gold">
                         مـ
                     </div>
                 </div>
-                <div>
-                    <span class="font-extrabold text-lg tracking-wider text-white block leading-tight">مؤمن ديزاين</span>
-                    <span class="text-[10px] text-brand-gold font-bold uppercase tracking-widest">خدمات التصميم الجرافيكي</span>
-                </div>
+                <span class="font-extrabold text-xl tracking-wider text-white">مؤمن <span class="text-brand-gold">ديزاين</span></span>
             </a>
 
             <div class="hidden md:flex items-center gap-8 font-bold text-sm text-gray-300">
                 <a href="#hero" class="hover:text-brand-gold transition-colors">الرئيسية</a>
-                <a href="#portfolio" class="hover:text-brand-gold transition-colors">معرض الأعمال</a>
-                <a href="#services" class="hover:text-brand-gold transition-colors">الخدمات</a>
                 <a href="#about" class="hover:text-brand-gold transition-colors">عنّي</a>
+                <a href="#services" class="hover:text-brand-gold transition-colors">الخدمات</a>
+                <a href="#portfolio" class="hover:text-brand-gold transition-colors">معرض الأعمال</a>
                 <a href="#contact" class="hover:text-brand-gold transition-colors">تواصل معي</a>
             </div>
 
-            <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-brand text-white font-bold text-sm hover:opacity-90 transition-all shadow-lg shadow-brand-teal/20">
-                <span>اطلب تصميمك</span>
-                <i class="fa-solid fa-arrow-left text-xs"></i>
+            <a href="https://wa.me/970567547806" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-brand text-white font-bold text-sm hover:opacity-90 transition-all shadow-lg shadow-brand-teal/20">
+                <i class="fa-brands fa-whatsapp text-base"></i>
+                <span>تواصل واتساب</span>
             </a>
         </div>
     </nav>
 
-    <!-- الواجهة الرئيسية -->
+    <!-- Hero Section -->
     <section id="hero" class="min-h-screen flex items-center justify-center pt-32 pb-20 px-6 relative overflow-hidden">
-        <div class="absolute top-1/4 right-10 w-96 h-96 bg-brand-teal/10 rounded-full blur-3xl -z-10"></div>
-        <div class="absolute bottom-10 left-10 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute inset-0 hero-glow -z-10"></div>
 
-        <div class="max-w-5xl mx-auto text-center space-y-8">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-brand-teal/30 text-xs font-bold text-gray-300">
-                <span class="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span>مصمم جرافيك ومختص تصاميم السوشيال ميديا (خبرة منذ 2017) 🎨</span>
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-brand-gold/30 text-xs font-bold text-gray-300">
+                <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>متاح الآن للمشاريع الجديدة والمستقلة</span>
             </div>
 
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white tracking-tight leading-tight">
-                نصنع للمنتجات والشركات <br>
-                <span class="text-gradient">هوية بصرية وتصاميم إعلانية</span> تجذب العملاء
+                أحوّل الأفكار إلى <br>
+                <span class="text-gradient">تجارب بصرية مدهشة</span>
             </h1>
 
-            <p class="max-w-2xl mx-auto text-gray-400 text-base md:text-lg leading-relaxed">
-                أساعد أصحاب المتاجر، الشركات، والشركاء الدوليين في تقديم أعمالهم بأعلى جودة احترافية تنافس في الأسواق وتزيد المبيعات.
+            <p id="about" class="max-w-2xl mx-auto text-gray-300 text-base md:text-lg leading-relaxed">
+                مصمم جرافيك ومتخصص في تصاميم السوشيال ميديا وصناعة الريلز بخبرة تبدأ من عام <span class="text-brand-gold font-bold">2017</span>. أساعد العلامات التجارية والمؤسسات على البروز البصري وزيادة المبيعات عبر تصاميم إبداعية موجهة.
             </p>
 
             <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
                 <a href="#portfolio" class="px-8 py-4 rounded-full bg-gradient-brand text-white font-bold text-sm hover:opacity-90 transition-all shadow-xl shadow-brand-teal/20 flex items-center gap-2">
-                    <span>تصفح الأعمال</span>
+                    <span>تصفح المعرض</span>
                     <i class="fa-solid fa-arrow-down text-xs"></i>
                 </a>
-                <a href="#contact" class="px-8 py-4 rounded-full glass-card text-white font-bold text-sm hover:bg-white/10 transition-all border border-gray-700">
-                    تواصل معي مباشرة
+                <a href="https://www.instagram.com/moemn_d?stkn=MXI0Y3lwODNmNHptNA==" target="_blank" class="px-8 py-4 rounded-full glass-card text-white font-bold text-sm hover:bg-white/10 transition-all border border-brand-gold/40 flex items-center gap-2">
+                    <i class="fa-brands fa-instagram text-lg text-brand-gold"></i>
+                    <span>إنستغرام</span>
                 </a>
             </div>
+        </div>
+    </section>
 
-            <!-- إحصائيات -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-16 border-t border-brand-border/60 max-w-4xl mx-auto">
-                <div class="glass-card p-6 rounded-2xl text-center">
-                    <p class="text-3xl font-extrabold text-white">+9 سنوات</p>
-                    <p class="text-xs text-gray-400 mt-1">خبرة في المجال (منذ 2017)</p>
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-6 bg-black/30 border-t border-brand-border/40">
+        <div class="max-w-7xl mx-auto space-y-12">
+            <div class="text-center space-y-3">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-gold">الخدمات الاحترافية</span>
+                <h2 class="text-3xl md:text-5xl font-black text-white">ماذا أقدم لعلامتك التجارية؟</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-card p-8 rounded-2xl text-center space-y-4 hover:border-brand-gold/60 transition-all">
+                    <div class="w-14 h-14 mx-auto rounded-xl bg-brand-teal/30 flex items-center justify-center text-brand-gold text-2xl">
+                        <i class="fa-solid fa-pen-nib"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">تصاميم السوشيال ميديا</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">بوسترات وإعلانات مبتكرة للمنصات تضمن أعلى نسبة تفاعل ومبيعات.</p>
                 </div>
-                <div class="glass-card p-6 rounded-2xl text-center">
-                    <p class="text-3xl font-extrabold text-brand-gold">+500</p>
-                    <p class="text-xs text-gray-400 mt-1">تصميم إعلاني واحترافي</p>
+
+                <div class="glass-card p-8 rounded-2xl text-center space-y-4 hover:border-brand-gold/60 transition-all">
+                    <div class="w-14 h-14 mx-auto rounded-xl bg-brand-teal/30 flex items-center justify-center text-brand-gold text-2xl">
+                        <i class="fa-solid fa-clapperboard"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">صناعة وتعديل الريلز</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">مونتاج احترافي للفيديوهات القصيرة يتناسب مع التريندات الحديثة.</p>
                 </div>
-                <div class="glass-card p-6 rounded-2xl text-center">
-                    <p class="text-3xl font-extrabold text-white">100%</p>
-                    <p class="text-xs text-gray-400 mt-1">التزام بالمواعيد والجودة</p>
+
+                <div class="glass-card p-8 rounded-2xl text-center space-y-4 hover:border-brand-gold/60 transition-all">
+                    <div class="w-14 h-14 mx-auto rounded-xl bg-brand-teal/30 flex items-center justify-center text-brand-gold text-2xl">
+                        <i class="fa-solid fa-rectangle-ad"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">إعلانات العروض</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">تصميم حملات ترويجية مركزة تحول المتابعين إلى زبائن دائمين.</p>
                 </div>
-                <div class="glass-card p-6 rounded-2xl text-center">
-                    <p class="text-3xl font-extrabold text-brand-teal">عالمي</p>
-                    <p class="text-xs text-gray-400 mt-1">عمل مع عملاء دوليين</p>
+
+                <div class="glass-card p-8 rounded-2xl text-center space-y-4 hover:border-brand-gold/60 transition-all">
+                    <div class="w-14 h-14 mx-auto rounded-xl bg-brand-teal/30 flex items-center justify-center text-brand-gold text-2xl">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">الهويات البصرية</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">بناء هوية متكاملة وشعارات المتاجر والمؤسسات بدقة عالية.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- معرض الأعمال مع أزرار التصفية -->
-    <section id="portfolio" class="py-24 px-6 bg-black/30 border-t border-brand-border/40">
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-24 px-6">
         <div class="max-w-7xl mx-auto space-y-12">
             <div class="text-center space-y-3">
                 <span class="text-xs font-bold uppercase tracking-widest text-brand-gold">معرض الأعمال</span>
-                <h2 class="text-3xl md:text-5xl font-black text-white">أحدث المشاريع والتصاميم</h2>
-                <p class="text-gray-400 max-w-md mx-auto text-sm">نماذج مختارة من تصاميم السوشيال ميديا، الهويات البصرية، والمطبوعات الإعلانية.</p>
+                <h2 class="text-3xl md:text-5xl font-black text-white">نماذج من أعمالي المميزة</h2>
             </div>
 
-            <!-- أزرار التصفية التفاعلية -->
-            <div class="flex flex-wrap justify-center gap-3">
-                <button onclick="filterPortfolio('all')" class="portfolio-btn px-6 py-2.5 rounded-full bg-brand-teal text-white font-bold text-xs transition-all">الكل</button>
-                <button onclick="filterPortfolio('social')" class="portfolio-btn px-6 py-2.5 rounded-full glass-card text-gray-300 hover:text-white font-bold text-xs transition-all">سوشيال ميديا</button>
-                <button onclick="filterPortfolio('branding')" class="portfolio-btn px-6 py-2.5 rounded-full glass-card text-gray-300 hover:text-white font-bold text-xs transition-all">هويات وشعارات</button>
-                <button onclick="filterPortfolio('print')" class="portfolio-btn px-6 py-2.5 rounded-full glass-card text-gray-300 hover:text-white font-bold text-xs transition-all">مطبوعات وإعلانات</button>
-            </div>
-
-            <!-- شبكة العرض -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
                 <!-- مشروع 1 -->
-                <div class="portfolio-item social glass-card rounded-2xl overflow-hidden group hover:border-brand-teal/50 transition-all duration-300">
-                    <div class="h-64 bg-gray-800 relative overflow-hidden">
-                        <!-- استبدل رابط الصورة برابط تصاميمك -->
-                        <img src="https://via.placeholder.com/600x600/161F2E/B89B66?text=Social+Media+Design" alt="تصميم سوشيال ميديا" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="glass-card rounded-2xl overflow-hidden group hover:border-brand-gold transition-all duration-300">
+                    <div class="h-72 bg-gray-900 relative overflow-hidden flex items-center justify-center">
+                        <img src="Zhran_clinic_(1).jpg" alt="عيادة زهران - كومفورت جل" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/600x600/15201D/B09066?text=Zhran+Clinic'">
                     </div>
                     <div class="p-6">
-                        <span class="text-xs font-bold text-brand-gold">سوشيال ميديا</span>
-                        <h3 class="text-xl font-bold text-white mt-1">حملة إعلانية لمنتج</h3>
-                        <p class="text-xs text-gray-400 mt-2">تصاميم احترافية مخصصة للفيسبوك والانستقرام لزيادة التفاعل.</p>
+                        <span class="text-xs font-bold text-brand-gold">القطاع الطبي</span>
+                        <h3 class="text-xl font-bold text-white mt-1">عيادة زهران - جل كومفورت</h3>
+                        <p class="text-xs text-gray-400 mt-2">تصميم بوستر تسويقي لمنتج علاجي مرخص بأسلوب جذاب.</p>
                     </div>
                 </div>
 
                 <!-- مشروع 2 -->
-                <div class="portfolio-item branding glass-card rounded-2xl overflow-hidden group hover:border-brand-teal/50 transition-all duration-300">
-                    <div class="h-64 bg-gray-800 relative overflow-hidden">
-                        <!-- استبدل رابط الصورة برابط تصاميمك -->
-                        <img src="https://via.placeholder.com/600x600/161F2E/317B74?text=Brand+Identity" alt="هوية بصرية" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="glass-card rounded-2xl overflow-hidden group hover:border-brand-gold transition-all duration-300">
+                    <div class="h-72 bg-gray-900 relative overflow-hidden flex items-center justify-center">
+                        <img src="سافر_معنا_نحو_عالم_الراحة..!_20230805_183814_٠٠٠٠.jpg" alt="عيادة زهران - المساج والراحة" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/600x600/15201D/2F7267?text=Massage+Services'">
                     </div>
                     <div class="p-6">
-                        <span class="text-xs font-bold text-brand-teal">هويات بصرية</span>
-                        <h3 class="text-xl font-bold text-white mt-1">تصميم هوية تجارية متكاملة</h3>
-                        <p class="text-xs text-gray-400 mt-2">شعار وألوان وأدلة استخدام كاملة لشركة تجارية.</p>
+                        <span class="text-xs font-bold text-brand-teal">خدمات ونقاهة</span>
+                        <h3 class="text-xl font-bold text-white mt-1">عيادة زهران - عالم الراحة</h3>
+                        <p class="text-xs text-gray-400 mt-2">تصميم ترويجي لخدمات المساج والاسترخاء.</p>
                     </div>
                 </div>
 
                 <!-- مشروع 3 -->
-                <div class="portfolio-item print glass-card rounded-2xl overflow-hidden group hover:border-brand-teal/50 transition-all duration-300">
-                    <div class="h-64 bg-gray-800 relative overflow-hidden">
-                        <!-- استبدل رابط الصورة برابط تصاميمك -->
-                        <img src="https://via.placeholder.com/600x600/161F2E/B89B66?text=Print+Ad" alt="مطبوعات" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="glass-card rounded-2xl overflow-hidden group hover:border-brand-gold transition-all duration-300">
+                    <div class="h-72 bg-gray-900 relative overflow-hidden flex items-center justify-center">
+                        <img src="png_20230729_230750_٠٠٠٠.jpg" alt="CMT Mobile Dash Cam" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/600x600/15201D/B09066?text=CMT+Dash+Cam'">
                     </div>
                     <div class="p-6">
-                        <span class="text-xs font-bold text-brand-gold">مطبوعات وإعلانات</span>
-                        <h3 class="text-xl font-bold text-white mt-1">تصميم كروت وبروشورات</h3>
-                        <p class="text-xs text-gray-400 mt-2">تصاميم طباعية عالية الدقة والوضوح وجاهزة للطباعة.</p>
+                        <span class="text-xs font-bold text-brand-gold">إلكترونيات</span>
+                        <h3 class="text-xl font-bold text-white mt-1">CMT Mobile - Dash Cam</h3>
+                        <p class="text-xs text-gray-400 mt-2">بوستر ترويجي لكاميرا السيارات الذكية FHD.</p>
                     </div>
                 </div>
 
+                <!-- مشروع 4 -->
+                <div class="glass-card rounded-2xl overflow-hidden group hover:border-brand-gold transition-all duration-300">
+                    <div class="h-72 bg-gray-900 relative overflow-hidden flex items-center justify-center">
+                        <img src="png_20230802_164527_٠٠٠٠.jpg" alt="CMT Mobile PS4 Controller" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/600x600/15201D/2F7267?text=PS4+Controller'">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-brand-teal">العاب وعروض</span>
+                        <h3 class="text-xl font-bold text-white mt-1">CMT Mobile - يد تحكم PS4</h3>
+                        <p class="text-xs text-gray-400 mt-2">تصميم إعلاني قوي لتقديم عروض الأسعار التنافسية.</p>
+                    </div>
+                </div>
+
+                <!-- مشروع 5 -->
+                <div class="glass-card rounded-2xl overflow-hidden group hover:border-brand-gold transition-all duration-300">
+                    <div class="h-72 bg-gray-900 relative overflow-hidden flex items-center justify-center">
+                        <img src="معرض الإسراء للأجهزة الكهربائية والمفروشات_20260412_223939_٠٠٠٠.jpg" alt="معرض الإسراء" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/600x600/15201D/B09066?text=Al-Israa+Showroom'">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-brand-gold">معارض ومفروشات</span>
+                        <h3 class="text-xl font-bold text-white mt-1">معرض الإسراء - عروض 2026</h3>
+                        <p class="text-xs text-gray-400 mt-2">تصميم إعلان عروض الأجهزة الكهربائية للعرسان.</p>
+                    </div>
+                </div>
+
+                <!-- مشروع 6 -->
+                <div class="glass-card rounded-2xl overflow-hidden group hover:border-brand-gold transition-all duration-300">
+                    <div class="h-72 bg-gray-900 relative overflow-hidden flex items-center justify-center">
+                        <img src="png_20230304_142058_٠٠٠٠.jpg" alt="مطعم الشيف" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://via.placeholder.com/600x600/15201D/2F7267?text=Pizza+Chief'">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-brand-teal">مطاعم وأغذية</span>
+                        <h3 class="text-xl font-bold text-white mt-1">مطعم الشيف - بيتزا بيتزا</h3>
+                        <p class="text-xs text-gray-400 mt-2">تصميم عصري وجذاب لوجبات المأكولات السريعة.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- قسم الخدمات -->
-    <section id="services" class="py-24 px-6">
-        <div class="max-w-7xl mx-auto space-y-16">
-            <div class="text-center max-w-2xl mx-auto space-y-3">
-                <span class="text-xs font-bold uppercase tracking-widest text-brand-gold">الخدمات</span>
-                <h2 class="text-3xl md:text-5xl font-black text-white">ماذا أقدم لك؟</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="glass-card p-8 rounded-2xl space-y-4 hover:border-brand-gold/50 transition-all">
-                    <div class="w-12 h-12 rounded-xl bg-brand-teal/20 text-brand-teal flex items-center justify-center text-xl font-bold">
-                        <i class="fa-solid fa-share-nodes"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white">تصاميم السوشيال ميديا</h3>
-                    <p class="text-xs text-gray-400 leading-relaxed">بوستات، إعلانات، وبوستات متعددة (Carousels) مصممة لجذب الانتباه وتحقيق المبيعات.</p>
-                </div>
-
-                <div class="glass-card p-8 rounded-2xl space-y-4 hover:border-brand-gold/50 transition-all">
-                    <div class="w-12 h-12 rounded-xl bg-brand-gold/20 text-brand-gold flex items-center justify-center text-xl font-bold">
-                        <i class="fa-solid fa-pen-nib"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white">الشعارات والهويات البصرية</h3>
-                    <p class="text-xs text-gray-400 leading-relaxed">بناء هوية بصرية كاملة تعكس قيمة براندك وتميزك عن المنافسين.</p>
-                </div>
-
-                <div class="glass-card p-8 rounded-2xl space-y-4 hover:border-brand-gold/50 transition-all">
-                    <div class="w-12 h-12 rounded-xl bg-brand-teal/20 text-brand-teal flex items-center justify-center text-xl font-bold">
-                        <i class="fa-solid fa-box-open"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white">التغليف والمطبوعات</h3>
-                    <p class="text-xs text-gray-400 leading-relaxed">تصميم كروت الشكر، العلب، والبروشورات الجاهزة للطباعة فوراً.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- قسم التواصل -->
-    <section id="contact" class="py-24 px-6 bg-black/40 border-t border-brand-border/40">
-        <div class="max-w-4xl mx-auto glass-card p-10 md:p-16 rounded-3xl text-center space-y-8">
-            <div class="space-y-4">
-                <span class="text-xs font-bold uppercase tracking-widest text-brand-gold">تواصل مباشر</span>
-                <h2 class="text-3xl md:text-5xl font-black text-white">هل لديك مشروع جاهز للتنفيذ؟</h2>
-                <p class="text-gray-400 max-w-xl mx-auto text-sm">أنا جاهز لتنفيذ تصاميمك بأعلى جودة واحترافية. تواصل معي فوراً للبدء!</p>
-            </div>
-
-            <div class="flex flex-wrap justify-center gap-6 pt-4">
-                <a href="https://wa.me/" class="px-8 py-4 rounded-full bg-emerald-600 text-white font-bold text-sm hover:bg-emerald-500 transition-all flex items-center gap-3">
-                    <i class="fa-brands fa-whatsapp text-lg"></i>
-                    <span>تواصل عبر الواتساب</span>
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 border-t border-brand-border/40">
+        <div class="max-w-4xl mx-auto glass-card p-10 md:p-16 rounded-3xl text-center space-y-8 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-brand opacity-10 -z-10"></div>
+            
+            <h2 class="text-3xl md:text-5xl font-black text-white">هل لديك مشروع ترغب في تنفيذه؟</h2>
+            <p class="text-gray-300 max-w-xl mx-auto text-sm md:text-base leading-relaxed">
+                تواصل معي الآن لنبدأ في تحويل فكرتك إلى تصميم بصري احترافي يجذب زبائنك ويبرز علامتك التجارية!
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-4 pt-4">
+                <a href="https://wa.me/970567547806" target="_blank" class="px-8 py-4 rounded-full bg-emerald-600 text-white font-bold text-sm hover:bg-emerald-500 transition-all flex items-center gap-3 shadow-lg shadow-emerald-600/20">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>تواصل عبر الواتساب مباشرة</span>
                 </a>
-                <a href="mailto:example@gmail.com" class="px-8 py-4 rounded-full glass-card border border-gray-700 text-white font-bold text-sm hover:bg-white/10 transition-all flex items-center gap-3">
-                    <i class="fa-solid fa-envelope"></i>
-                    <span>مراسلة عبر البريد</span>
+                
+                <a href="https://www.instagram.com/moemn_d?stkn=MXI0Y3lwODNmNHptNA==" target="_blank" class="px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-sm hover:opacity-90 transition-all flex items-center gap-3 shadow-lg shadow-pink-600/20">
+                    <i class="fa-brands fa-instagram text-xl"></i>
+                    <span>حساب الإنستغرام</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- الفوتر -->
     <footer class="py-8 px-6 border-t border-brand-border/30 text-center text-xs text-gray-500">
         <p>© 2026 مؤمن ديزاين. جميع الحقوق محفوظة.</p>
     </footer>
 
-    <!-- سكربت التفاعلية لتصفية المشاريع -->
-    <script>
-        function filterPortfolio(category) {
-            const items = document.querySelectorAll('.portfolio-item');
-            items.forEach(item => {
-                if (category === 'all' || item.classList.contains(category)) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        }
-    </script>
 </body>
 </html>
