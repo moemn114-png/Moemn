@@ -21,9 +21,9 @@
                         brand: {
                             teal: '#2F7267',
                             gold: '#B09066',
-                            dark: '#0D1412',
-                            card: '#15201D',
-                            border: '#23332E'
+                            dark: '#0B1210',
+                            card: '#121D1A',
+                            border: '#1E2F2A'
                         }
                     },
                     fontFamily: {
@@ -35,16 +35,16 @@
     </script>
     <style>
         body {
-            background-color: #0D1412;
+            background-color: #0B1210;
             color: #E2E8F0;
         }
         .glass-card {
-            background: rgba(21, 32, 29, 0.85);
+            background: rgba(18, 29, 26, 0.90);
             backdrop-filter: blur(16px);
             border: 1px solid rgba(176, 144, 102, 0.25);
         }
         .text-gradient {
-            background: linear-gradient(135deg, #B09066 0%, #E2C299 50%, #2F7267 100%);
+            background: linear-gradient(135deg, #B09066 0%, #D4B28C 50%, #2F7267 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -52,21 +52,25 @@
             background: linear-gradient(135deg, #2F7267 0%, #B09066 100%);
         }
         .hero-glow {
-            background: radial-gradient(circle, rgba(47, 114, 103, 0.35) 0%, rgba(176, 144, 102, 0.15) 50%, rgba(13, 20, 18, 0) 70%);
+            background: radial-gradient(circle, rgba(47, 114, 103, 0.3) 0%, rgba(176, 144, 102, 0.12) 50%, rgba(11, 18, 16, 0) 70%);
         }
     </style>
 </head>
 <body class="font-sans antialiased selection:bg-brand-teal selection:text-white">
 
     <!-- Navbar -->
-    <nav class="fixed top-0 left-0 w-full z-50 glass-card border-b border-brand-border/50">
+    <nav class="fixed top-0 left-0 w-full z-50 glass-card border-b border-brand-border/60">
         <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-            <!-- Brand Logo -->
+            <!-- Brand Logo Name -->
             <a href="#" class="flex items-center gap-3">
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=200&q=80" alt="Mo'men Design Logo" class="h-11 w-11 rounded-xl object-cover border border-brand-gold/40 shadow-md">
+                <div class="w-11 h-11 rounded-xl bg-gradient-brand p-0.5 flex items-center justify-center shadow-lg shadow-brand-teal/20">
+                    <div class="w-full h-full bg-brand-dark rounded-[10px] flex items-center justify-center font-extrabold text-xl text-brand-gold">
+                        M
+                    </div>
+                </div>
                 <div class="flex flex-col">
                     <span class="font-extrabold text-lg tracking-wider text-white leading-tight">MO'MEN <span class="text-brand-gold">DESIGN</span></span>
-                    <span class="text-[10px] text-gray-400 font-medium tracking-wide" data-en="Design Services" data-ar="خدمات التصميم">Design Services</span>
+                    <span class="text-[10px] text-brand-gold/70 font-semibold tracking-wide" data-en="Design Services" data-ar="خدمات التصميم">Design Services</span>
                 </div>
             </a>
 
@@ -87,7 +91,7 @@
                 </button>
 
                 <!-- WhatsApp CTA -->
-                <a href="https://wa.me/970567547806" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-brand text-white font-bold text-xs hover:opacity-90 transition-all shadow-lg shadow-brand-teal/20">
+                <a href="https://wa.me/970567547806" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-brand text-white font-bold text-xs hover:opacity-90 transition-all shadow-lg shadow-brand-teal/25">
                     <i class="fa-brands fa-whatsapp text-sm"></i>
                     <span data-en="Let's Talk" data-ar="تواصل معي">Let's Talk</span>
                 </a>
@@ -101,7 +105,7 @@
 
         <div class="max-w-4xl mx-auto text-center space-y-8">
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-brand-gold/30 text-xs font-bold text-gray-300">
-                <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span class="flex h-2 w-2 rounded-full bg-brand-gold animate-pulse"></span>
                 <span data-en="Available for Freelance & Remote Projects" data-ar="متاح للمشاريع المستقلة والعمل عن بُعد">Available for Freelance & Remote Projects</span>
             </div>
 
@@ -117,7 +121,7 @@
             </p>
 
             <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
-                <a href="#portfolio" class="px-8 py-4 rounded-full bg-gradient-brand text-white font-bold text-sm hover:opacity-90 transition-all shadow-xl shadow-brand-teal/20 flex items-center gap-2">
+                <a href="#portfolio" class="px-8 py-4 rounded-full bg-gradient-brand text-white font-bold text-sm hover:opacity-90 transition-all shadow-xl shadow-brand-teal/25 flex items-center gap-2">
                     <span data-en="View Portfolio" data-ar="تصفح الأعمال">View Portfolio</span>
                     <i class="fa-solid fa-arrow-down text-xs"></i>
                 </a>
@@ -130,7 +134,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 px-6 bg-black/30 border-t border-brand-border/40">
+    <section id="services" class="py-20 px-6 bg-black/30 border-t border-brand-border/60">
         <div class="max-w-7xl mx-auto space-y-12">
             <div class="text-center space-y-3">
                 <span class="text-xs font-bold uppercase tracking-widest text-brand-gold" data-en="Specialized Expertise" data-ar="الخدمات الاحترافية">Specialized Expertise</span>
@@ -138,32 +142,32 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="glass-card p-8 rounded-2xl text-center space-y-4 hover:border-brand-gold/60 transition-all">
-                    <div class="w-14 h-14 mx-auto rounded-xl bg-brand-teal/30 flex items-center justify-center text-brand-gold text-2xl">
+                <div class="glass-card p-8 rounded-2xl text-center space-y-4 hover:border-brand-gold transition-all">
+                    <div class="w-14 h-14 mx-auto rounded-xl bg-brand-teal/20 border border-brand-teal/40 flex items-center justify-center text-brand-gold text-2xl">
                         <i class="fa-solid fa-pen-nib"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white" data-en="Social Media Design" data-ar="تصاميم السوشيال ميديا">Social Media Design</h3>
                     <p class="text-xs text-gray-400 leading-relaxed" data-en="High-converting ad designs and creative posts optimized for all platforms." data-ar="تصاميم إعلانية مبتكرة موجهة لزيادة المبيعات والتفاعل.">High-converting ad designs and creative posts optimized for all platforms.</p>
                 </div>
 
-                <div class="glass-card p-8 rounded-2xl text-center space-y-4 hover:border-brand-gold/60 transition-all">
-                    <div class="w-14 h-14 mx-auto rounded-xl bg-brand-teal/30 flex items-center justify-center text-brand-gold text-2xl">
+                <div class="glass-card p-8 rounded-2xl text-center space-y-4 hover:border-brand-gold transition-all">
+                    <div class="w-14 h-14 mx-auto rounded-xl bg-brand-teal/20 border border-brand-teal/40 flex items-center justify-center text-brand-gold text-2xl">
                         <i class="fa-solid fa-clapperboard"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white" data-en="Reels & Video Editing" data-ar="صناعة وتعديل الريلز">Reels & Video Editing</h3>
                     <p class="text-xs text-gray-400 leading-relaxed" data-en="Engaging short-form video content production tailored to current social trends." data-ar="صناعة فيديوهات قصيرة جذابة تتناسب مع التريندات الحالية.">Engaging short-form video content production tailored to current social trends.</p>
                 </div>
 
-                <div class="glass-card p-8 rounded-2xl text-center space-y-4 hover:border-brand-gold/60 transition-all">
-                    <div class="w-14 h-14 mx-auto rounded-xl bg-brand-teal/30 flex items-center justify-center text-brand-gold text-2xl">
+                <div class="glass-card p-8 rounded-2xl text-center space-y-4 hover:border-brand-gold transition-all">
+                    <div class="w-14 h-14 mx-auto rounded-xl bg-brand-teal/20 border border-brand-teal/40 flex items-center justify-center text-brand-gold text-2xl">
                         <i class="fa-solid fa-rectangle-ad"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white" data-en="Promotional Campaigns" data-ar="حملات العروض الإعلانية">Promotional Campaigns</h3>
                     <p class="text-xs text-gray-400 leading-relaxed" data-en="Eye-catching promotional graphics designed to turn viewers into buyers." data-ar="بوسترات عروض ترويجية مركزة تحول المتابعين لزبائن دائمين.">Eye-catching promotional graphics designed to turn viewers into buyers.</p>
                 </div>
 
-                <div class="glass-card p-8 rounded-2xl text-center space-y-4 hover:border-brand-gold/60 transition-all">
-                    <div class="w-14 h-14 mx-auto rounded-xl bg-brand-teal/30 flex items-center justify-center text-brand-gold text-2xl">
+                <div class="glass-card p-8 rounded-2xl text-center space-y-4 hover:border-brand-gold transition-all">
+                    <div class="w-14 h-14 mx-auto rounded-xl bg-brand-teal/20 border border-brand-teal/40 flex items-center justify-center text-brand-gold text-2xl">
                         <i class="fa-solid fa-layer-group"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white" data-en="Visual Identity" data-ar="الهويات البصرية">Visual Identity</h3>
@@ -182,9 +186,9 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1: Zhran Gel -->
+                <!-- Project 1 -->
                 <div class="glass-card rounded-2xl overflow-hidden group hover:border-brand-gold transition-all duration-300">
-                    <div class="h-72 bg-gray-900 relative overflow-hidden flex items-center justify-center">
+                    <div class="h-72 bg-brand-dark relative overflow-hidden flex items-center justify-center">
                         <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Zhran Clinic" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6">
@@ -194,9 +198,9 @@
                     </div>
                 </div>
 
-                <!-- Project 2: Zhran Massage -->
+                <!-- Project 2 -->
                 <div class="glass-card rounded-2xl overflow-hidden group hover:border-brand-gold transition-all duration-300">
-                    <div class="h-72 bg-gray-900 relative overflow-hidden flex items-center justify-center">
+                    <div class="h-72 bg-brand-dark relative overflow-hidden flex items-center justify-center">
                         <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80" alt="Spa & Massage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6">
@@ -206,9 +210,9 @@
                     </div>
                 </div>
 
-                <!-- Project 3: CMT Dashcam -->
+                <!-- Project 3 -->
                 <div class="glass-card rounded-2xl overflow-hidden group hover:border-brand-gold transition-all duration-300">
-                    <div class="h-72 bg-gray-900 relative overflow-hidden flex items-center justify-center">
+                    <div class="h-72 bg-brand-dark relative overflow-hidden flex items-center justify-center">
                         <img src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80" alt="CMT Mobile Dash Cam" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6">
@@ -218,9 +222,9 @@
                     </div>
                 </div>
 
-                <!-- Project 4: CMT PS4 -->
+                <!-- Project 4 -->
                 <div class="glass-card rounded-2xl overflow-hidden group hover:border-brand-gold transition-all duration-300">
-                    <div class="h-72 bg-gray-900 relative overflow-hidden flex items-center justify-center">
+                    <div class="h-72 bg-brand-dark relative overflow-hidden flex items-center justify-center">
                         <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&w=800&q=80" alt="Gaming Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6">
@@ -230,9 +234,9 @@
                     </div>
                 </div>
 
-                <!-- Project 5: Israa Showroom -->
+                <!-- Project 5 -->
                 <div class="glass-card rounded-2xl overflow-hidden group hover:border-brand-gold transition-all duration-300">
-                    <div class="h-72 bg-gray-900 relative overflow-hidden flex items-center justify-center">
+                    <div class="h-72 bg-brand-dark relative overflow-hidden flex items-center justify-center">
                         <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Home Appliances" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6">
@@ -242,9 +246,9 @@
                     </div>
                 </div>
 
-                <!-- Project 6: Pizza Chief -->
+                <!-- Project 6 -->
                 <div class="glass-card rounded-2xl overflow-hidden group hover:border-brand-gold transition-all duration-300">
-                    <div class="h-72 bg-gray-900 relative overflow-hidden flex items-center justify-center">
+                    <div class="h-72 bg-brand-dark relative overflow-hidden flex items-center justify-center">
                         <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80" alt="Pizza Chief Restaurant" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6">
@@ -258,12 +262,10 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-24 px-6 border-t border-brand-border/40">
-        <div class="max-w-4xl mx-auto glass-card p-10 md:p-16 rounded-3xl text-center space-y-8 relative overflow-hidden">
+    <section id="contact" class="py-24 px-6 border-t border-brand-border/60">
+        <div class="max-w-4xl mx-auto glass-card p-10 md:p-16 rounded-3xl text-center space-y-8 relative overflow-hidden border border-brand-gold/30">
             <div class="absolute inset-0 bg-gradient-brand opacity-10 -z-10"></div>
             
             <h2 class="text-3xl md:text-5xl font-black text-white" data-en="Have a Project in Mind?" data-ar="هل لديك مشروع تريد تنفيذه؟">Have a Project in Mind?</h2>
             <p class="text-gray-300 max-w-xl mx-auto text-sm md:text-base leading-relaxed"
-               data-en="Let's collaborate to elevate your brand identity and craft visuals that convert visitors into loyal clients."
-               data-ar="تواصل معي الآن لنبدأ في تحويل فكرتك إلى تصميم بصري احترافي يجذب زبائنك ويبرز علامتك التجارية!">
-    
+               data-en="Let's collaborate to el
